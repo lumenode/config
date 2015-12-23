@@ -2,4 +2,4 @@
 
 var Repository = require('./Repository');
 
-module.exports = Repository;
+module.exports = new Repository;
