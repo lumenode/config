@@ -1,5 +1,5 @@
 {
-  "name": "numenode-config",
+  "name": "lumenode-config",
   "version": "1.0.0",
   "description": "Config package",
   "main": "index.js",
@@ -13,7 +13,9 @@
   "keywords": [
     "config"
   ],
-  "author": "Iurii Krevnyi",
+  "author": {
+    "name": "Iurii Krevnyi"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lumenode/config/issues"
@@ -25,5 +27,10 @@
   "devDependencies": {
     "mocha": "^2.3.4",
     "should": "^8.0.2"
-  }
+  },
+  "gitHead": "1e706c4312b7291de6643bbe9e29780507a79aa1",
+  "readme": "ERROR: No README data found!",
+  "_id": "lumenode-config@1.0.0",
+  "_shasum": "71dc73a22f0a2b0b51004d222fc1d6f5c015716f",
+  "_from": "lumenode-config@*"
 }
