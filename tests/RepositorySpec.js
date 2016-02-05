@@ -1,22 +1,20 @@
 'use strict';
 
 require('should');
-var Config = require('../Repository');
+let Config = require('../Repository');
 
-describe('<Unit test>', function () {
-  describe('Config Repository Spec', function () {
+describe('<Unit test>', () => {
+  describe('Config Repository Spec', () => {
 
-    var config;
+    let config;
 
-    beforeEach(function () {
-      config = new Config;
-    });
+    beforeEach(() => config = new Config);
 
-    it('is empty', function () {
+    it('is empty', () => {
       config.all().should.be.empty;
     });
 
-    it('sets value', function () {
+    it('sets value', () => {
       config.set('some-key', 'some-value');
 
       config.all().should.be.eql({
@@ -24,13 +22,13 @@ describe('<Unit test>', function () {
       });
     });
 
-    it('retrieves values', function () {
+    it('retrieves values', () => {
       config.set('some-new-key', 'value');
 
       config.get('some-new-key').should.be.eql('value');
     });
 
-    it('sets deep value by path/query', function () {
+    it('sets deep value by path/query', () => {
       config.set('some.deep.key', {
         hello: 'world'
       });
@@ -44,7 +42,7 @@ describe('<Unit test>', function () {
       });
     });
 
-    it('retrieves deep values', function () {
+    it('retrieves deep values', () => {
       config.set('level1.level2.level3.level4', 'hi');
 
       config.get('level1.level2').should.be.eql({
@@ -54,7 +52,7 @@ describe('<Unit test>', function () {
       });
     });
 
-    it('loads big amount of data', function () {
+    it('loads big amount of data', () => {
       config.load({
         level1: 'hello',
         level2: {
@@ -82,7 +80,7 @@ describe('<Unit test>', function () {
       config.get('level3').should.be.eql('level-3-value');
     });
 
-    it('returns default value if original not found', function () {
+    it('returns default value if original not found', () => {
       config.get('non-existing-value', 'default').should.be.eql('default');
     });
 
