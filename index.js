@@ -2,6 +2,6 @@
 
 var Logger = require('./Logger');
 
-module.exports = function(basePath) {
-  return new Logger(basePath);
+module.exports = function(Config, basePath) {
+  return new Logger(Config, basePath);
 };
