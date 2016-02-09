@@ -8,13 +8,10 @@ class Logger {
     this.basePath = basePath;
     this.logger = logger || require('log4js');
 
-    if (Config.get('app.logToConsole')) {
-      this.logger.loadAppender('console');
-    }
-
+    this.logger.loadAppender('console');
     this.logger.loadAppender('file');
 
-    this.configure();
+    this.configure(Config.get('app.logToConsole'));
 
     this.addAppender('info', 'logs/');
     this.addAppender('error', 'logs/');
@@ -29,12 +26,12 @@ class Logger {
    *
    * @return {void}
    */
-  configure() {
+  configure(logToConsole) {
     var appenders = [];
 
-    appenders.push({
-      type: 'console'
-    });
+    if (logToConsole) {
+      appenders.push({type: 'console'});
+    }
 
     this.logger.configure({
       appenders: appenders
