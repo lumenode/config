@@ -2,13 +2,16 @@
 
 class Logger {
 
-  constructor(basePath, logger) {
+  constructor(Config, basePath, logger) {
     if (!basePath) throw Error('Specify basePath, please.');
 
     this.basePath = basePath;
     this.logger = logger || require('log4js');
 
-    this.logger.loadAppender('console');
+    if (Config.get('app.logToConsole')) {
+      this.logger.loadAppender('console');
+    }
+
     this.logger.loadAppender('file');
 
     this.configure();

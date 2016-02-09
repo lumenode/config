@@ -10,10 +10,13 @@ describe('<Unit Test>', () => {
     it('is initializible', () => {
       let api = require('log4js');
       let mock = sinon.mock(api);
+      let config = {
+        get: () => true
+      }
 
       mock.expects('configure').once();
 
-      let logger = new Logger(__dirname, api);
+      let logger = new Logger(config, __dirname, api);
 
       mock.verify();
     });
