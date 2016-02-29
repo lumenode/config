@@ -1,7 +1,5 @@
 'use strict';
 
-var Logger = require('./Logger');
+var Repository = require('./Repository');
 
-module.exports = function(Config, basePath) {
-  return new Logger(Config, basePath);
-};
+module.exports = new Repository;
