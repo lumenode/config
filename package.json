@@ -8,29 +8,31 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lumenode/config.git"
+    "url": "git+https://github.com/lumenode/logger.git"
   },
   "keywords": [
-    "config"
+    "logger"
   ],
   "author": {
     "name": "Iurii Krevnyi"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lumenode/config/issues"
+    "url": "https://github.com/lumenode/logger/issues"
   },
-  "homepage": "https://github.com/lumenode/config#readme",
+  "homepage": "https://github.com/lumenode/logger#readme",
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "log4js": "^0.6.29"
   },
   "devDependencies": {
     "mocha": "^2.3.4",
-    "should": "^8.0.2"
+    "should": "^8.0.2",
+    "sinon": "^1.17.2"
   },
   "gitHead": "1e706c4312b7291de6643bbe9e29780507a79aa1",
   "readme": "ERROR: No README data found!",
-  "_id": "lumenode-config@1.0.0",
-  "_shasum": "71dc73a22f0a2b0b51004d222fc1d6f5c015716f",
-  "_from": "lumenode-config@*"
+  "_id": "lumenode-logger@1.0.0",
+  "_shasum": "489285bb5d89e0aaba7990aad1aa09e21aff6ae3",
+  "_from": "lumenode-logger@*"
 }
